@@ -1,5 +1,6 @@
 plugins {
     kotlin("multiplatform")
+    kotlin("plugin.serialization") version "1.6.20"
     id("com.android.library")
 }
 
@@ -18,6 +19,7 @@ kotlin {
 
     sourceSets {
         val ktorVersion = "2.0.0"
+        val xmlUtilVersion = "0.84.2"
 
         val commonMain by getting {
             dependencies {
@@ -25,6 +27,8 @@ kotlin {
                     implementation("io.ktor:ktor-client-core:$ktorVersion")
                     implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
                     implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+                    implementation("io.github.pdvrieze.xmlutil:core:$xmlUtilVersion")
+                    implementation("io.github.pdvrieze.xmlutil:serialization:$xmlUtilVersion")
                 }
             }
         }
