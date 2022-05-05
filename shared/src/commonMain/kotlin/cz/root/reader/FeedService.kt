@@ -23,3 +23,5 @@ class FeedService {
         )
     }
 }
+
+internal expect val httpEngine: HttpClientEngine
