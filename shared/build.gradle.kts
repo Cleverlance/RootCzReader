@@ -6,7 +6,8 @@ plugins {
 
 kotlin {
     android()
-    
+    jvm()
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -33,6 +34,11 @@ kotlin {
             }
         }
         val androidMain by getting {
+            dependencies {
+                implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
+            }
+        }
+        val jvmMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
             }

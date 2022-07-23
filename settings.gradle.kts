@@ -8,4 +8,5 @@ pluginManagement {
 
 rootProject.name = "Rootcz_Reader"
 include(":androidApp")
+include(":consoleApp")
 include(":shared")
